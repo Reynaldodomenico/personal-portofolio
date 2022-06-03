@@ -11,85 +11,83 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="images/Logo.ico" />
+    <link rel="icon" href="images/logo2.png" />
   </head>
   <body>
    
     <div id="menu-bars" class="fas fa-bars"></div>
 
-    <!-- header section starts  -->
-
+    <!-- header section-->
     <header>
-      <a href="#" class="logo"> <span>reynaldo</span> domenico </a>
+      <a href="#" class="logo"> RD</a>
 
-      <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#experience">experience</a>
-        <a href="#portfolio">portfolio</a>
-        <a href="#contact">contact</a>
+      <nav class="navbar controls">
+        <a class="control active-btn" data-id="home">Home</a>
+        <a class="control" data-id="about">About Me</a>
+        <a class="control" data-id="experience">Experience</a>
+        <a class="control" data-id="portfolio">Portfolio</a>
+        <a class="control" data-id="contact">Contact</a>
       </nav>
 
       <div class="follow">
-        <a href="https://www.facebook.com/reynaldo.domenico.1/" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
+        <a href="https://www.facebook.com/reynaldo.domenico.1/" class="fab fa-facebook-f"></a>       
         <a href="https://www.instagram.com/reynaldodomenico/?hl=en" class="fab fa-instagram"></a>
+        <a href="https://github.com/Reynaldodomenico" class="fab fa-github"></a>
         <a href="https://www.linkedin.com/in/reynaldo-domenico-54209a21a/" class="fab fa-linkedin"></a>
       </div>
+
+      <div class="copyright">
+        Copyright © 2022 Reynaldo Domenico.
+      </div>
     </header>
+    <!-- header section-->
 
-    <!-- header section ends -->
+    <!-- home section -->
 
-    <!-- home section starts  -->
-
-    <section class="home" id="home">
-      <div class="content">
-        <span class="hi"> hi there... </span>
-        <h3>i am <span> reynaldo domenico </span></h3>
-        <p class="info">I am a student in Germany</p>
-        <p class="text">
-          I am currently enrolled in HTW Berlin as a computer engineering
-          student
-        </p>
-        <a href="#about" class="btn">about me</a>
+    <section class="container home active" id="home" title="home-Reynaldo Domenico">
+      <div>
+        <h1>I am <span> Reynaldo</span></h1>
+        <p>Computer Science and Engineering Bachelor student.</p>
       </div>
 
     </section>
 
-    <!-- home section ends -->
+    <!-- home section -->
 
-    <!-- about section starts  -->
+    <!-- about section -->
 
-    <section class="about" id="about">
+    <section class="container about" id="about">
       <h1 class="heading">about <span> me </span></h1>
 
       <div class="row-1">
-        <div class="image">
-          <img src="images/profile.png" alt="" />
+        <div>
+          <img src="images/profile.png" alt="profile-picture" />
         </div>
 
         <div class="content">
-          <h3>my name is Reynaldo Domenico and a student</h3>
+          <h3>My name is Reynaldo Domenico</h3>
           <p>
-            im interested in programming and everything that work in that field.
-            I like to play game in my free time, its one of my hobby.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Pharetra convallis posuer  
           </p>
           <div class="box-container">
             <div class="box">
-              <p><span> age : </span> 23</p>
-              <p><span> gender : </span> male</p>
-              <p><span> language : </span> German, english, indonesia</p>
-              <p><span> work : </span> Available for hiring</p>
+              <p><span> Age : </span> 23</p>
+              <p><span> Gender : </span> male</p>
+              <p><span> Language : </span> German, english, indonesia</p>
+              <p><span> Work : </span> Available for hiring</p>
             </div>
             <div class="box">
-              <p><span> phone : </span> +49176742847865</p>
-              <p><span> email : </span> reynaldodomenico@yahoo.com</p>
-              <p><span> country : </span> Germany</p>
+              <p><span> Phone : </span> +49176742847865</p>
+              <p><span> Email : </span> reynaldodomenico@yahoo.com</p>
+              <p><span> Country : </span> Germany</p>
             </div>
           </div>
-          <a href="#" class="btn">download CV</a>
-          <a href="#" class="btn">hire me</a>
+          <a href="#" class="btn">Download CV</a>
         </div>
       </div>
 
@@ -114,6 +112,7 @@
             <div class="bar"><span></span></div>
           </div>
         </div>
+      </section>
 
         
 
@@ -123,7 +122,7 @@
 
     <!-- experience section starts  -->
 
-    <section class="experience" id="experience">
+    <section class="container experience" id="experience">
       <h1 class="heading"><span> my </span> experience</h1>
 
       <div class="box-container">
@@ -161,7 +160,7 @@
 
     <!-- portfolio section starts  -->
 
-    <section class="portfolio" id="portfolio">
+    <section class="container portfolio" id="portfolio">
       <h1 class="heading"><span> my </span> portfolio</h1>
 
       <div class="box-container">
@@ -231,7 +230,7 @@
 
     <!-- contact section starts  -->
 
-    <section class="contact" id="contact">
+    <section class="container contact" id="contact">
       <h1 class="heading">contact <span> me </span></h1>
 
       <div class="icons-container">
@@ -275,11 +274,6 @@
     </section>
 
     <!-- contact section ends -->
-
-    <!-- footer section  -->
-    <footer class="footer">
-      Copyright © 2022<span> Reynaldo Domenico.</span>
-    </footer>
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
