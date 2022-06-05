@@ -132,6 +132,17 @@ header .copyright {
   font-size: 1.7rem;
 }
 
+.btn-contact {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  background: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.7rem;
+}
+
 .btn:hover {
   background-color: white;
   color: black;
