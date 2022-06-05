@@ -2,6 +2,7 @@
 
 :root {
   --main-color: #a1a5a5;
+  --color-primary: #191b1b;
 }
 
 * {
@@ -16,6 +17,10 @@
   line-height: 1.5;
 }
 
+span {
+  color: var(--main-color);
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -23,7 +28,7 @@ html {
 }
 
 body {
-  background: #191b1b;
+  background: var(--color-primary);
   color: white;
 }
 
@@ -43,7 +48,7 @@ section {
   background-color: var(--color-primary);
 }
 
-.active {
+.activechild {
   display: block;
   animation: appear 1s ease-in-out;
   transform: translateY(0) scaleY(1);
@@ -60,6 +65,7 @@ section {
   text-transform: uppercase;
 }
 
+/* header */
 header {
   position: fixed;
   top: 0;
@@ -79,7 +85,7 @@ header {
 header .logo {
   text-transform: uppercase;
   color: rgb(168, 164, 164);
-  font-size: 13em;
+  font-size: 10em;
   font-weight: bolder;
   font-family: "Satisfy", cursive;
 }
@@ -112,7 +118,9 @@ header .copyright {
   bottom: 3%;
   font-size: 12px;
 }
+/* header */
 
+/* button */
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -128,6 +136,7 @@ header .copyright {
   background-color: white;
   color: black;
 }
+/* button */
 
 #menu-bars {
   position: fixed;
@@ -143,6 +152,7 @@ header .copyright {
   display: none;
 }
 
+/* home */
 .home {
   display: flex;
   justify-content: center;
@@ -155,61 +165,207 @@ header .copyright {
   font-size: 10em;
 }
 
-.home span {
-  color: var(--main-color);
-}
-
 .home p {
   font-size: 2em;
 }
+/* home */
 
-.about img {
-  float: left;
-  width: 50%;
-  margin-right: 30px;
+/* Page Title */
+.main-title {
+  text-align: center;
 }
-
-.about .row-1 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding-bottom: 2rem;
+.main-title h1 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
 }
-
-.about .row-1 .content {
-  flex: 1 1 50rem;
-}
-
-.about .row-1 .content h3 {
-  font-size: 3.5rem;
-}
-
-.about .row-1 .content p {
-  font-size: 1.7rem;
-  padding: 0.5rem 0;
-}
-
-.about .row-1 .content .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 0.5rem 0;
-}
-
-.about .row-1 .content .box-container .box {
-  flex: 1 1 20rem;
-}
-
-.about .row-1 .content .box-container .box span {
+.main-title h1 span {
   color: var(--main-color);
 }
-
-.about .row-2 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  align-items: center;
+.main-title h1 .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgb(49, 49, 49);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 6.3rem;
 }
+/* Page Title */
+
+/* About */
+.about {
+  padding-left: 30%;
+}
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 100px;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+.about-container .left-about img {
+  width: 105%;
+  padding-top: 10rem;
+  padding-right: 3rem;
+}
+
+.about-container .left-about {
+  padding-right: 3rem;
+}
+
+.about-container .right-about p {
+  font-size: 2rem;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.about-container .right-about h4 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  color: #a1a5a5;
+  text-align: center;
+}
+
+.timeline-title {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.3rem;
+  border-left: 1px solid white;
+  margin-bottom: 3rem;
+}
+.tl-icon {
+  position: absolute;
+  left: -27px;
+  top: -10px;
+  background-color: rgb(45, 62, 109);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tl-icon i {
+  font-size: 3rem;
+}
+.tl-duration {
+  margin-left: 2rem;
+  padding: 0.2rem 0.7rem;
+  background-color: grey;
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.timeline-item h5 {
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.timeline-item h5 span {
+  color: grey;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.timeline-item p {
+  color: white;
+}
+
+.study-timeline {
+  margin-right: 5rem;
+}
+
+.study-timeline h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.work-timeline h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+/* About */
+
+/* Resume */
+
+/* Resume */
+
+/* contact */
+.contact {
+  padding-left: 30%;
+}
+
+.contact-content-con {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10rem;
+}
+
+.contact-content-con h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.contact-content-con .left-contact h5 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-content-con .left-contact span {
+  font-size: 2rem;
+}
+
+.contact-content-con .left-contact .contact-info .contact-item .icon {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+
+.contact-content-con .left-contact .contact-info .contact-item .icon i {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.contact-content-con .right-contact .input-field {
+  width: 400px;
+  height: 40px;
+  margin-top: 20px;
+  border: 1px solid #777;
+  border-radius: 14px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.contact-content-con .right-contact textarea {
+  height: 150px;
+  padding-top: 10px;
+}
+
+/* contact */
 
 /* media queries  */
 @media (max-width: 991px) {
@@ -221,6 +377,10 @@ header .copyright {
     padding: 0;
   }
 
+  .about-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .home {
     padding-left: 20%;
   }
@@ -229,11 +389,15 @@ header .copyright {
     display: initial;
   }
 
+  .contact {
+    padding-left: 15%;
+  }
+
   header {
     left: -120%;
   }
 
-  header.active1 {
+  header.active {
     left: 0%;
   }
 }
@@ -243,8 +407,16 @@ header .copyright {
     font-size: 50%;
   }
 
+  .about-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .home {
     padding-left: 20%;
+  }
+
+  .contact {
+    padding-left: 0;
   }
 
   header {
