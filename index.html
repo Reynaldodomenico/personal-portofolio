@@ -313,6 +313,12 @@
           <div class="right-contact">
             <h4>Message me !</h4>
                <form action="https://formsubmit.co/reynaldodomenico@yahoo.com" method="POST">
+
+                  <!-- Honeypot to prevent spam -->
+                  <input type="text" name="_honey" style="display: none;">
+                   <!-- Disable Captcha -->
+                   <input type="hidden" name="_captcha" value="false">
+
                  <input type="text" class="input-field" name="name" placeholder="Your Name">
                  <input type="email" class="input-field" name="email" placeholder="Your Email">
                  <input type="text" class="input-field" name="subject" placeholder="Subject">
