@@ -22,6 +22,7 @@ window.onscroll = () => {
     button.addEventListener("click", function () {
       document.querySelector(".activechild").classList.remove("activechild");
       document.getElementById(button.dataset.id).classList.add("activechild");
+      classList.remove(menu);
     });
   });
 })();
