@@ -12,6 +12,7 @@ menu.onclick = () => {
     button.addEventListener("click", function () {
       document.querySelector(".activechild").classList.remove("activechild");
       document.getElementById(button.dataset.id).classList.add("activechild");
+      menu.classList.toggle("fa-times");
       header.classList.remove("active");
     });
   });
