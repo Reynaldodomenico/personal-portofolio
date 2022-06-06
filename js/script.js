@@ -7,8 +7,19 @@ menu.onclick = () => {
   header.classList.toggle("active");
 };
 
-control.onclick = () => {
-  document.querySelector(".activechild").classList.remove("activechild");
-  document.getElementById(button.dataset.id).classList.add("activechild");
-  header.classList.remove("active");
-};
+// foreach.control.onclick = () => {
+//   document.querySelector(".activechild").classList.remove("activechild");
+//   document.getElementById(button.dataset.id).classList.add("activechild");
+//   header.classList.remove("active");
+// };
+
+(function () {
+  control.forEach((button) => {
+    button.addEventListener("click", function () {
+      document.querySelector(".activechild").classList.remove("activechild");
+      document.getElementById(button.dataset.id).classList.add("activechild");
+      header.classList.remove("active");
+      menu.classList.remove("fa-times");
+    });
+  });
+})();

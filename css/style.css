@@ -93,10 +93,13 @@ header {
 
 header .logo {
   text-transform: uppercase;
-  color: rgb(168, 164, 164);
+  color: var(--main-color);
   font-size: 10em;
   font-weight: bolder;
   font-family: "Satisfy", cursive;
+}
+header .logo:hover {
+  cursor: pointer;
 }
 
 header .navbar a {
@@ -262,8 +265,7 @@ header .copyright {
   font-size: 3rem;
   text-transform: uppercase;
   padding-bottom: 10px;
-  color: #a1a5a5;
-  text-align: center;
+  color: var(--main-color);
 }
 
 .timeline-title {
@@ -281,7 +283,7 @@ header .copyright {
 .timeline-item {
   position: relative;
   padding-left: 2.3rem;
-  border-left: 1px solid white;
+  border-left: 1px solid var(--color-secondary)
   margin-bottom: 3rem;
 }
 .tl-icon {
@@ -302,7 +304,7 @@ header .copyright {
 .tl-duration {
   margin-left: 2rem;
   padding: 0.2rem 0.7rem;
-  background-color: grey;
+  background-color: var(--main-color);
   border-radius: 15px;
   display: inline-block;
   font-size: 1.5rem;
@@ -314,12 +316,14 @@ header .copyright {
   font-weight: 600;
 }
 .timeline-item h5 span {
-  color: grey;
+  color: var(--main-color);
   font-weight: 500;
   font-size: 2rem;
 }
-.timeline-item p {
+
+.timeline-item .tl-description {
   color: var(--color-secondary);
+  font-size: 1.3rem;
 }
 
 .study-timeline {
@@ -383,7 +387,7 @@ header .copyright {
 }
 .resumes .resume-item .hover-items h3 {
   font-size: 2.5rem;
-  color: #191b1b;
+  color: var(--color-primary);
   margin-bottom: 1.5rem;
 }
 .resumes .resume-item .hover-items .icons {
@@ -392,7 +396,7 @@ header .copyright {
   align-items: center;
 }
 .resumes .resume-item .hover-items .icons .icon {
-  background-color: #191b1b;
+  background-color: var(--color-primary);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -563,7 +567,7 @@ header .copyright {
   width: 90%;
   height: 40px;
   margin-top: 20px;
-  border: 1px solid #777;
+  border: 1px solid var(--main-color);
   border-radius: 14px;
   outline: none;
   padding-left: 10px;
@@ -574,7 +578,7 @@ header .copyright {
   height: 150px;
   padding-top: 10px;
   margin-top: 20px;
-  border: 1px solid #777;
+  border: 1px solid var(--main-color);
   border-radius: 14px;
   outline: none;
   padding-left: 10px;
@@ -583,6 +587,97 @@ header .copyright {
 /* contact */
 
 /* media queries  */
+@media screen and (max-width: 1432px) {
+  .container {
+    padding: 7rem 11rem;
+  }
+
+  .contact-content-con {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+
+  .contact-content-con .right-contact .i-c-2 {
+    flex-direction: column;
+  }
+
+  .contact-content-con .right-contact .i-c-2 :last-child {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .contact-content-con .right-contact {
+    margin-bottom: 6rem;
+  }
+
+  .main-title h1 .bg-text {
+    font-size: 5.5rem;
+  }
+  .home {
+    padding-left: 30%;
+  }
+  .contact {
+    padding-left: 30%;
+  }
+  .about {
+    padding-left: 30%;
+  }
+  .resume {
+    padding-left: 30%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .resumes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .about-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-container .right-about {
+    padding-top: 2.5rem;
+  }
+
+  .home {
+    padding-left: 30%;
+  }
+  .contact {
+    padding-left: 30%;
+  }
+  .about {
+    padding-left: 30%;
+  }
+  .resume {
+    padding-left: 30%;
+  }
+  .main-title h1 {
+    font-size: 4rem;
+  }
+  .main-title h1 span {
+    font-size: 4rem;
+  }
+  .main-title h1 .bg-text {
+    font-size: 4.5rem;
+  }
+  .contact-content-con {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .resume .hobby {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 5%;
+  }
+  .timeline-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 5%;
+  }
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -617,43 +712,91 @@ header .copyright {
   }
 }
 
-@media (max-width: 450px) {
-  html {
-    font-size: 50%;
+@media screen and (max-width: 970px) {
+  .container {
+    padding: 7rem 6rem;
   }
 
-  .about-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .home {
-    padding-left: 20%;
-  }
-
-  .contact {
-    padding-left: 20%;
-  }
-
-  header {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  header {
-    padding: 0 !important;
+  .about-container .left-about {
+    padding-right: 0rem;
   }
 
   .header-content {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
+  .contact-content-con {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .resume .hobby {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 5%;
+  }
+  .timeline-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 5%;
+  }
+}
 
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 55%;
+  }
+  .container {
+    padding: 7rem 3rem;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .main-title h1 {
+    font-size: 3rem;
+  }
+  .main-title h1 span {
+    font-size: 3rem;
+  }
+  .main-title h1 .bg-text {
+    font-size: 4rem;
+  }
+
+  .contact-content-con {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .resume .hobby {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 5%;
+  }
+
+  .timeline-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .resumes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact-content-con {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .resume .hobby {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 5%;
+  }
+  .timeline-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
   .about-container .right-about {
-    grid-template-columns: repeat(1, 1fr);
     padding-top: 2.5rem;
   }
   .about-container .left-about {
@@ -682,11 +825,6 @@ header .copyright {
     margin-top: 1rem;
   }
 
-  .blogs {
-    grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 6rem;
-  }
-
   .contact-content-con {
     flex-direction: column;
   }
@@ -694,23 +832,8 @@ header .copyright {
     margin-left: 0;
     margin-top: 2.5rem;
   }
-
   .contact-content-con .right-contact {
     margin-bottom: 6rem;
-  }
-  .contact-item {
-    flex-direction: column;
-    margin: 1rem 0;
-  }
-  .contact-item p {
-    font-size: 15px;
-    color: var(--color-grey-2);
-  }
-  .contact-item span {
-    font-size: 15px;
-  }
-  .contact-item .icon {
-    grid-template-columns: 25px 1fr;
   }
 
   .main-title h1 {
@@ -723,154 +846,26 @@ header .copyright {
     font-size: 2.3rem;
   }
 }
-@media screen and (max-width: 1432px) {
-  .container {
-    padding: 7rem 11rem;
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
   }
 
-  .contact-content-con {
-    flex-direction: column;
-  }
-  .contact-content-con .right-contact {
-    margin-left: 0;
-    margin-top: 2.5rem;
-  }
-
-  .contact-content-con .right-contact .i-c-2 {
-    flex-direction: column;
-  }
-
-  .contact-content-con .right-contact .i-c-2 :last-child {
-    margin-left: 0;
-    margin-top: 1.5rem;
-  }
-
-  .contact-content-con .right-contact {
-    margin-bottom: 6rem;
-  }
-
-  .main-title h1 .bg-text {
-    font-size: 5.5rem;
-  }
-}
-@media screen and (max-width: 1250px) {
-  .blogs {
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 6rem;
-  }
-
-  .resumes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 660px) {
-  .resumes {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .contact-content-con {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .resume .hobby {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 5%;
-  }
-  .timeline-container {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 5%;
-  }
-}
-@media screen and (max-width: 1070px) {
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .about-container .right-about {
-    padding-top: 2.5rem;
+
+  .home {
+    padding-left: 20%;
   }
 
-  .main-title h1 {
-    font-size: 4rem;
-  }
-  .main-title h1 span {
-    font-size: 4rem;
-  }
-  .main-title h1 .bg-text {
-    font-size: 4.5rem;
-  }
-  .contact-content-con {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .resume .hobby {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 5%;
-  }
-  .timeline-container {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 5%;
-  }
-}
-@media screen and (max-width: 970px) {
-  .container {
-    padding: 7rem 6rem;
+  .contact {
+    padding-left: 20%;
   }
 
-  .about-container .left-about {
-    padding-right: 0rem;
-  }
-
-  .header-content {
-    grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 6rem;
-  }
-  .contact-content-con {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .resume .hobby {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 5%;
-  }
-  .timeline-container {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 5%;
-  }
-}
-@media screen and (max-width: 700px) {
-  html {
-    font-size: 55%;
-  }
-  .container {
-    padding: 7rem 3rem;
-  }
-
-  .about-container .right-about {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .timeline {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .main-title h1 {
-    font-size: 3rem;
-  }
-  .main-title h1 span {
-    font-size: 3rem;
-  }
-  .main-title h1 .bg-text {
-    font-size: 4rem;
-  }
-
-  .contact-content-con {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .resume .hobby {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 5%;
-  }
-
-  .timeline-container {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 5%;
+  header {
+    width: 100%;
   }
 }
 
