@@ -13,10 +13,6 @@ menu.onclick = () => {
 //   document.getElementById(button.dataset.id).classList.add("activechild");
 //   header.classList.remove("active");
 // };
-redirect.onclick = () => {
-  document.querySelector(".activechild").classList.remove("activechild");
-  document.getElementById(button.dataset.id).classList.add("activechild");
-};
 
 (function () {
   control.forEach((button) => {
