@@ -853,6 +853,10 @@ header .copyright {
     font-size: 50%;
   }
 
+  .container h1{
+    font-size: 4em;
+  }
+
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
