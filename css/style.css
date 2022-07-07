@@ -445,19 +445,20 @@ header .copyright {
 .resume .hobby-item .hobby-description i {
   font-size: 2.5rem;
   position: absolute;
-  left: -35px;
   top: 5px;
 }
 
 .resume .hobby-item .hobby-description h1 {
   font-size: 2.5rem;
   padding-left: 1rem;
+  margin-left: 35px;
 }
 
 .resume .hobby-item .hobby-description p {
   padding-top: 1rem;
   font-size: 1.5rem;
   padding-left: 1rem;
+  text-align: justify;
 }
 
 .resume .skills-title {
